@@ -232,7 +232,7 @@ void NativeFileImport::import(bool load_symbols_only)
 		{
 			MapPrinterConfig printer_config(*map);
 			stream->read((char*)&printer_config.page_format.orientation, sizeof(int));
-			stream->read((char*)&printer_config.page_format.paper_size, sizeof(int));
+			stream->read((char*)&printer_config.page_format.page_size, sizeof(int));
 			
 			float resolution;
 			stream->read((char*)&resolution, sizeof(float));

@@ -80,9 +80,6 @@ public:
 	/** Indicates the default widget size. */
 	QSize sizeHint() const override;
 	
-	/** Returns a translated name for the given paper size. */
-	static QString toString(QPrinter::PaperSize size);
-	
 public slots:
 	/** Changes the type of the print or export task. */
 	void setTask(TaskFlags type);
@@ -229,7 +226,7 @@ protected:
 	
 	/** A list of paper sizes which is used when the target does not specify
 	 *  supported paper sizes. */
-	QList<QPrinter::PaperSize> defaultPaperSizes() const;
+	QList<QPageSize> defaultPageSizes() const;
 	
 	/** Moves the given rectangle to a position where it is centered on the
 	 *  map for the current output options. */
