@@ -198,7 +198,7 @@ endif()
 add_definitions(-D_USE_MATH_DEFINES -DUNICODE)
 
 if(Mapper_DEVELOPMENT_BUILD)
-	add_definitions(-DMAPPER_DEVELOPMENT_BUILD)
+	add_definitions(-DMAPPER_DEVELOPMENT_BUILD -DQT_DISABLE_DEPRECATED_BEFORE=0x051000)
 	include(EnableSanitize)
 	enable_sanitize(address undefined)
 	configure_file(suppress.txt.in suppress.txt COPYONLY)
