@@ -94,8 +94,7 @@ MapWidget::MapWidget(bool show_help, bool force_antialiasing, QWidget* parent)
 {
 	context_menu = new PieMenu(this);
 // 	context_menu->setMinimumActionCount(8);
-// 	context_menu->setIconSize(24);
-	
+
 	setAttribute(Qt::WA_OpaquePaintEvent);
 	setAttribute(Qt::WA_AcceptTouchEvents, true);
 	setGesturesEnabled(true);

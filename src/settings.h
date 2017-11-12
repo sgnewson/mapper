@@ -52,6 +52,7 @@ public:
 		EditTool_DeleteBezierPointActionAlternative,
 		RectangleTool_HelperCrossRadiusMM,
 		RectangleTool_PreviewLineWidth,
+        PieMenu_ToolRadius,
 		Templates_KeepSettingsOfClosed,
 		SymbolWidget_IconSizeMM,
 		ActionGridBar_ButtonSizeMM,

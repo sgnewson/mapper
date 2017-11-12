@@ -66,6 +66,8 @@ private:
 	
 	QSpinBox* rectangle_helper_cross_radius;
 	QCheckBox* rectangle_preview_line_width;
+
+    QSpinBox* pie_menu_radius;
 };
 
 

@@ -97,6 +97,10 @@ EditorSettingsPage::EditorSettingsPage(QWidget* parent)
 	rectangle_preview_line_width = new QCheckBox(tr("Preview the width of lines with helper cross"));
 	layout->addRow(rectangle_preview_line_width);
 	
+    layout->addRow(Util::Headline::create(tr("Pie menu:")));
+
+    pie_menu_radius = Util::SpinBox::create(5, 50);
+    layout->addRow(tr("Radius of pie menu:"), pie_menu_radius);
 	
 	connect(antialiasing, &QAbstractButton::toggled, text_antialiasing, &QCheckBox::setEnabled);
 	
@@ -129,6 +133,7 @@ void EditorSettingsPage::apply()
 	setSetting(Settings::EditTool_DeleteBezierPointActionAlternative, edit_tool_delete_bezier_point_action_alternative->currentData());
 	setSetting(Settings::RectangleTool_HelperCrossRadiusMM, rectangle_helper_cross_radius->value());
 	setSetting(Settings::RectangleTool_PreviewLineWidth, rectangle_preview_line_width->isChecked());
+    setSetting(Settings::PieMenu_ToolRadius, pie_menu_radius->value());
 }
 
 void EditorSettingsPage::reset()
@@ -155,5 +160,7 @@ void EditorSettingsPage::updateWidgets()
 	
 	rectangle_helper_cross_radius->setValue(getSetting(Settings::RectangleTool_HelperCrossRadiusMM).toInt());
 	rectangle_preview_line_width->setChecked(getSetting(Settings::RectangleTool_PreviewLineWidth).toBool());
+
+    pie_menu_radius->setValue(getSetting(Settings::PieMenu_ToolRadius).toInt());
 }
 

@@ -74,8 +74,10 @@ Settings::Settings()
 	registerSetting(RectangleTool_HelperCrossRadiusMM, "RectangleTool/helper_cross_radius_mm", 100.0f);
 	registerSetting(RectangleTool_PreviewLineWidth, "RectangleTool/preview_line_with", true);
 	
+    registerSetting(PieMenu_ToolRadius, "PieMenu/tool_radius", 24);
+
 	registerSetting(Templates_KeepSettingsOfClosed, "Templates/keep_settings_of_closed_templates", true);
-	
+
 	registerSetting(ActionGridBar_ButtonSizeMM, "ActionGridBar/button_size_mm", touch_button_minimum_size_default);
 	registerSetting(SymbolWidget_IconSizeMM, "SymbolWidget/icon_size_mm", symbol_widget_icon_size_mm_default);
 	

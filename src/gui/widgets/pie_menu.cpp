@@ -35,7 +35,6 @@
 PieMenu::PieMenu(QWidget* parent)
 : QWidget(parent, Qt::Popup | Qt::FramelessWindowHint),	// NOTE: use Qt::Window for debugging to avoid mouse grab
    minimum_action_count(3),
-   icon_size(24),
    active_action(nullptr),
    actions_changed(true),
    clicked(false)
@@ -45,7 +44,9 @@ PieMenu::PieMenu(QWidget* parent)
 	setAttribute(Qt::WA_ShowWithoutActivating);
 	setAutoFillBackground(false);
 	setMouseTracking(true);
-	
+
+	icon_size = Settings::getInstance().getSetting(Settings::PieMenu_ToolRadius).toInt();
+
 	auto scale = Settings::getInstance().getSetting(Settings::General_PixelsPerInch).toReal() / 96.0;
 	if (scale > 1.5)
 	{
