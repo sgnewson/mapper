@@ -55,6 +55,7 @@ PieMenu::PieMenu(QWidget* parent)
 	
 	updateCachedState();
 }
+//
 
 int PieMenu::minimumActionCount() const
 {

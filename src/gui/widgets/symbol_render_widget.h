@@ -144,7 +144,7 @@ public slots:
 	/**
 	 * Observes settings changes related to symbol display.
 	 */
-	void settingsChanged();
+	void settingsChanged(); //
 	
 signals:
 	/**
